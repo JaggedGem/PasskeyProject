@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Passkey Manager",
+    "version": "1.0",
+    "permissions": [
+      "storage",
+      "tabs",
+      "activeTab",
+      "webRequest",
+      "webRequestBlocking"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
